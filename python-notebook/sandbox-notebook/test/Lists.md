@@ -2,7 +2,6 @@
 
 ---
 
-
 ```python
 def test_fetch_item_from_list(self):
     self.assertTrue(self.person[2], "This person should be enabled")
