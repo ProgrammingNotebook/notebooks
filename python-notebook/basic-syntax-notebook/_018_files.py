@@ -3,7 +3,7 @@
 #------------------------------------------
 
 # Opening a file creates a new handle, file is a handle here
-file = open('test.txt', 'w')
+file = open('_019_test.txt', 'w')
 
 # These statements will write text on a single line.
 file.write('This is a test to understand,')
@@ -15,7 +15,7 @@ file.close()
 
 # In order to write to different lines
 
-file = open('test.txt', 'w')
+file = open('_019_test.txt', 'w')
 
 # These statements will write text on multiple line, because of escape character
 # '\n'
@@ -29,7 +29,7 @@ file.close()
 # How to read file text line by line
 #------------------------------------
 
-handle = open('test.txt', 'r')
+handle = open('_019_test.txt', 'r')
 
 while True:
     line = handle.readline()
@@ -42,7 +42,7 @@ handle.close()
 #----------------------------
 # Reading whole file at once
 #----------------------------
-handle = open('test.txt', 'r')
+handle = open('_019_test.txt', 'r')
 
 data = handle.read()
 print(data)
