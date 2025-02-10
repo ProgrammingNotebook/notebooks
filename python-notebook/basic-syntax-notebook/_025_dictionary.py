@@ -41,3 +41,15 @@ print(keys_list)
 value_list = list(dic.values())
 print(type(value_list))
 print(value_list)
+
+
+# Creating dictionary directly
+
+latest = {
+    "name": "Gagandeep Singh",
+    "age": 37,
+}
+
+print(latest['age'])
+print(type(latest))
+print(latest)
