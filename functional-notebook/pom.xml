@@ -10,6 +10,7 @@
 
     <modules>
         <module>reactor-kafka-notebook</module>
+        <module>sandbox</module>
     </modules>
 
     <properties>
