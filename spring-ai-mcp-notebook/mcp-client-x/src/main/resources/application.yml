@@ -1,0 +1,46 @@
+# Server's port definition
+server:
+  port: 8019
+
+# Spring configurations
+spring:
+  application:
+    name: mcp-client-x
+
+  # Spring AI configurations
+  ai:
+
+    # Azure OpenAI configurations
+    azure:
+      openai:
+        chat:
+          options:
+            deployment-name: gpt-4o-mini
+        endpoint: https://gagan-mdx9ypm9-swedencentral.openai.azure.com/
+        api-key: 89SQurOEQ2IAms57ltOfg3tsN123E1DqXaZe5knBm8YZVG9O0urdJQQJ99BHACfhMk5XJ3w3AAAAACOGMZrw
+#        embeddings:
+#          options:
+#            deployment-name: text-embedding-ada-002
+
+    # MCP Client to Server Connection Configuration
+    mcp:
+      client:
+        enabled: true
+        name: mcp-client-x
+        version: 0.0.1
+        initialized: true
+        request-timeout: 20s
+        root-change-notification: true
+        type: async
+        toolcallback.enabled: true
+        sse:
+          connections:
+            server1:
+              url: http://localhost:8018
+              sse-endpoint: /api/v1/sse
+
+# Logging configurations
+logging:
+  level:
+    io.modelcontextprotocol: TRACE
+    org.springframework.ai.mcp: TRACE

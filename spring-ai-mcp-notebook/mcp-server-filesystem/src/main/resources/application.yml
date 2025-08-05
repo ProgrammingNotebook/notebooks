@@ -1,0 +1,29 @@
+# Server's port definition
+server:
+  port: 8018
+
+# Spring configurations
+spring:
+  application:
+    name: mcp-filesystem-server
+
+  # Spring AI configurations
+  ai:
+    mcp:
+      server:
+        enabled: true
+        stdio: false
+        name: mcp-filesystem-server
+        version: 0.0.1
+        resource-change-notification: true
+        tool-change-notification: true
+        prompt-change-notification: true
+        sse-endpoint: /api/v1/sse
+        sse-message-endpoint: /api/v1/mcp
+        type: async
+
+# Logging configurations
+logging:
+  level:
+    io.modelcontextprotocol: TRACE
+    org.springframework.ai.mcp: TRACE
