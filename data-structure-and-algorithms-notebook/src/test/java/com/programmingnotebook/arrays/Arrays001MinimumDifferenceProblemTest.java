@@ -11,12 +11,6 @@ class Arrays001MinimumDifferenceProblemTest {
 
     private final ArrayProblems arrayProblems = new ArrayProblems();
 
-    @ParameterizedTest
-    @MethodSource("arrayInput")
-    void minimumDifferenceBetweenTwoArraysTestWhenArraysAreEmpty(int expected, int[] arrayA, int[] arrayB) {
-        Assertions.assertEquals(expected, arrayProblems.minimumDistanceProblem(arrayA, arrayB));
-    }
-
     private static Stream<Arguments> arrayInput() {
         return Stream.of(
                 Arguments.of(0, null, null),
@@ -33,5 +27,11 @@ class Arrays001MinimumDifferenceProblemTest {
                 Arguments.of(10, new int[]{23, 43, 53}, new int[]{11, 33, 43}),
                 Arguments.of(95, new int[]{0, 2, 5}, new int[]{100, 99, 100})
         );
+    }
+
+    @ParameterizedTest
+    @MethodSource("arrayInput")
+    void minimumDifferenceBetweenTwoArraysTestWhenArraysAreEmpty(int expected, int[] arrayA, int[] arrayB) {
+        Assertions.assertEquals(expected, arrayProblems.minimumDistanceProblem(arrayA, arrayB));
     }
 }
