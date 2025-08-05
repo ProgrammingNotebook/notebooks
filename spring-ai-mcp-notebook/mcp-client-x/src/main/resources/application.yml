@@ -16,11 +16,8 @@ spring:
         chat:
           options:
             deployment-name: gpt-4o-mini
-        endpoint: https://gagan-mdx9ypm9-swedencentral.openai.azure.com/
-        api-key: 89SQurOEQ2IAms57ltOfg3tsN123E1DqXaZe5knBm8YZVG9O0urdJQQJ99BHACfhMk5XJ3w3AAAAACOGMZrw
-#        embeddings:
-#          options:
-#            deployment-name: text-embedding-ada-002
+        endpoint: ${AZURE_OPENAI_ENDPOINT}
+        api-key: ${AZURE_OPENAI_API_KEY}
 
     # MCP Client to Server Connection Configuration
     mcp:
